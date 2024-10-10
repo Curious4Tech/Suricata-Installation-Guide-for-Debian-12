@@ -68,22 +68,19 @@ sudo systemctl status suricata
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/28223828-821f-4c7a-8304-7f8d1d9d84cd">
 
 ## Updating Suricata Rules
-
-To update Suricata rules:
-
-1. Stop the Suricata service:
-   ```
-   sudo systemctl stop suricata
-   ```
-
-2. Update the rules:
+Suricata uses Signatures to trigger alerts so it's necessary to install those and keep them updated. Signatures are also called rules, thus the name rule-files. With the tool suricata-update rules can be fetched, updated and managed to be provided for Suricata.
+In this guide we just run the default mode which fetches the ET Open ruleset:
    ```
    sudo suricata-update
    ```
+<img width="942" alt="image" src="https://github.com/user-attachments/assets/7c76fb8c-b548-4ea8-b07c-44e1fdfd62be">
 
+
+Afterwards the rules are installed at /var/lib/suricata/rules which is also the default at the config and uses the sole suricata.rules file.
 3. Restart the Suricata service:
+With the rules installed, Suricata can run properly and thus we restart it:
    ```
-   sudo systemctl start suricata
+   sudo systemctl restart suricata
    ```
 
 ## Troubleshooting
