@@ -61,6 +61,11 @@ af-packet:
       use-mmap: yes
       tpacket-v3: yes
 ```
+Check that Suricata is running properly:
+```
+sudo systemctl status suricata
+```
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/28223828-821f-4c7a-8304-7f8d1d9d84cd">
 
 ## Updating Suricata Rules
 
