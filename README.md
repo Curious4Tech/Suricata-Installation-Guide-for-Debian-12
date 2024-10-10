@@ -47,18 +47,26 @@ This guide provides step-by-step instructions for installing Suricata on Debian 
    sudo systemctl start suricata
    ```
 
-9. Check the status of Suricata:
-   ```
-   sudo systemctl status suricata
-   ```
-
 ## Configuration
 
 After installing Suricata, you need to configure it. The main configuration file is located at /etc/suricata/suricata.yaml. You can edit this file to set up network interfaces, rules, and logging options:
  ```
 sudo nano /etc/suricata/suricata.yaml
 ```
-Ensure the `HOME_NET` variable reflects your local network. Adjust other settings as needed, such as interface selection and logging preferences.
+There are many possible configuration options, we focus on the setup of the HOME_NET variable and the network interface configuration. The HOME_NET variable should include, in most scenarios, the IP address of the monitored interface and all the local networks in use. The default already includes the RFC 1918 networks. In this example 10.0.0.23 is already included within 10.0.0.0/8. If no other networks are used the other predefined values can be removed.
+
+In this example the interface name is enp1s0 so the interface name in the af-packet section needs to match. An example interface config might look like this:
+
+Capture settings:
+```
+af-packet:
+    - interface: enp1s0
+      cluster-id: 99
+      cluster-type: cluster_flow
+      defrag: yes
+      use-mmap: yes
+      tpacket-v3: yes
+```
 
 ## Updating Suricata Rules
 
