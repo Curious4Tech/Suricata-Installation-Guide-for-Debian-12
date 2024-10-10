@@ -76,10 +76,11 @@ In this guide we just run the default mode which fetches the ET Open ruleset:
 <img width="942" alt="image" src="https://github.com/user-attachments/assets/7c76fb8c-b548-4ea8-b07c-44e1fdfd62be">
 
 
-Afterwards the rules are installed at /var/lib/suricata/rules which is also the default at the config and uses the sole suricata.rules file.
+Afterwards the rules are installed at `/var/lib/suricata/rules` which is also the default at the config and uses the sole `suricata.rules` file.
 
 
 Restart the Suricata service:
+
 With the rules installed, Suricata can run properly and thus we restart it:
    ```
    sudo systemctl restart suricata
