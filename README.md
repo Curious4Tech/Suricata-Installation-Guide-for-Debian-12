@@ -16,31 +16,20 @@ This guide provides step-by-step instructions for installing Suricata on Debian 
    ```
    sudo apt update && sudo apt upgrade -y
    ```
-   <img width="958" alt="image" src="https://github.com/user-attachments/assets/542bc334-0e6f-46de-8d43-4679bfcaa4d0">
-
-
 
 2. Install dependencies:
    ```
    sudo apt install -y libpcre3 libpcre3-dbg libpcre3-dev build-essential autoconf automake libtool libpcap-dev libnet1-dev libyaml-0-2 libyaml-dev pkg-config zlib1g zlib1g-dev libcap-ng-dev libmagic-dev libjansson-dev libgeoip-dev python3-yaml rustc cargo
 
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/3517c10c-d6d3-4e45-9617-fa3c9e14ff1d">  
-
-
-
-
 3. Install Suricata:
    ```
    sudo apt install -y suricata
    ```
-  <img width="955" alt="image" src="https://github.com/user-attachments/assets/a72eafd9-08da-478d-8d86-f2c550ce2ea9">
 
 7. Verify the installation:
    ```
    suricata --version
    ```
- <img width="888" alt="image" src="https://github.com/user-attachments/assets/5fb71948-8a0c-4588-91b6-50dc4424cf1e">
-
 8. Enable and start the Suricata service:
    ```
    sudo systemctl enable suricata
@@ -53,7 +42,11 @@ After installing Suricata, you need to configure it. The main configuration file
  ```
 sudo nano /etc/suricata/suricata.yaml
 ```
-There are many possible configuration options, we focus on the setup of the HOME_NET variable and the network interface configuration. The HOME_NET variable should include, in most scenarios, the IP address of the monitored interface and all the local networks in use. The default already includes the RFC 1918 networks. In this example 10.0.0.23 is already included within 10.0.0.0/8. If no other networks are used the other predefined values can be removed.
+There are many possible configuration options, we focus on the setup of the `HOME_NET` variable and the network interface configuration. The `HOME_NET` variable should include, in most scenarios, the IP address of the monitored interface and all the local networks in use. The default already includes the RFC 1918 networks. 
+
+<img width="850" alt="image" src="https://github.com/user-attachments/assets/aab23309-1aa0-4468-b5bc-b1af43c26aa6">
+
+In this example 192.168.10.9 is already included within 192.168.10.0/24. If no other networks are used the other predefined values can be removed.
 
 In this example the interface name is enp1s0 so the interface name in the af-packet section needs to match. An example interface config might look like this:
 
