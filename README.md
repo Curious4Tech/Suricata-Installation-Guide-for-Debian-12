@@ -24,32 +24,33 @@ This guide provides step-by-step instructions for installing Suricata on Debian 
 
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/3517c10c-d6d3-4e45-9617-fa3c9e14ff1d">  
 
-3. Add the Suricata repository:```
+3. Add the Suricata repository:
+   ```
    sudo add-apt-repository ppa:oisf/suricata-stable -y
    ```
 
-4. Update the package list:
+5. Update the package list:
    ```
    sudo apt update
    ```
 
-5. Install Suricata:
+6. Install Suricata:
    ```
    sudo apt install -y suricata
    ```
 
-6. Verify the installation:
+7. Verify the installation:
    ```
    suricata --version
    ```
 
-7. Enable and start the Suricata service:
+8. Enable and start the Suricata service:
    ```
    sudo systemctl enable suricata
    sudo systemctl start suricata
    ```
 
-8. Check the status of Suricata:
+9. Check the status of Suricata:
    ```
    sudo systemctl status suricata
    ```
