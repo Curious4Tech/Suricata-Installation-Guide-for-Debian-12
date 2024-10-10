@@ -88,9 +88,25 @@ With the rules installed, Suricata can run properly and thus we restart it:
 
 ## Troubleshooting
 
-If you encounter any issues, check the Suricata log file:
+If you encounter any issues or want to make sure Suricata is running check the Suricata log:
 ```
 sudo tail -f /var/log/suricata/suricata.log
 ```
+See statistics, check the stats.log file:
+```
+sudo tail -f /var/log/suricata/stats.log
+```
+By default, it is updated every 8 seconds to show updated values with the current state, like how many packets have been processed and what type of traffic was decoded.
+
+Monitor Suricata Logs
+Suricata logs its activity in `/var/log/suricata/`. The `eve.json` file contains event logs, including `IDS/IPS` alerts. 
+
+Use the following command to monitor the logs:
+```
+sudo tail -f /var/log/suricata/eve.json
+```
+
+## Conclusion
+Suricata is now installed and configured on your Debian 12 system. You can further enhance its capabilities by integrating it with monitoring tools like ELK Stack or Grafana for visualizing network traffic and alerts.
 
 For more detailed information, refer to the [official Suricata documentation](https://suricata.readthedocs.io/).
