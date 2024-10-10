@@ -44,16 +44,17 @@ sudo nano /etc/suricata/suricata.yaml
 ```
 There are many possible configuration options, we focus on the setup of the `HOME_NET` variable and the network interface configuration. The `HOME_NET` variable should include, in most scenarios, the IP address of the monitored interface and all the local networks in use. The default already includes the RFC 1918 networks. 
 
-<img width="850" alt="image" src="https://github.com/user-attachments/assets/aab23309-1aa0-4468-b5bc-b1af43c26aa6">
+<img width="850" alt="image" src="https://github.com/user-attachments/assets/f601dbdc-92bd-456a-b359-9ea666b0a55d">
 
-In this example 192.168.10.9 is already included within 192.168.10.0/24. If no other networks are used the other predefined values can be removed.
 
-In this example the interface name is enp1s0 so the interface name in the af-packet section needs to match. An example interface config might look like this:
+In this example `192.168.10.9` is already included within `192.168.10.0/24`. If no other networks are used the other predefined values can be removed.
+
+In this example the interface name is `enp0s3` so the interface name in the af-packet section needs to match. An example interface config might look like this:
 
 Capture settings:
 ```
 af-packet:
-    - interface: enp1s0
+    - interface: enp0s3
       cluster-id: 99
       cluster-type: cluster_flow
       defrag: yes
