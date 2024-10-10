@@ -22,9 +22,7 @@ This guide provides step-by-step instructions for installing Suricata on Debian 
    ```
    sudo apt install -y libpcre3 libpcre3-dbg libpcre3-dev build-essential autoconf automake libtool libpcap-dev libnet1-dev libyaml-0-2 libyaml-dev pkg-config zlib1g zlib1g-dev libcap-ng-dev libmagic-dev libjansson-dev libgeoip-dev python3-yaml rustc cargo
 
-   <img width="960" alt="image" src="https://github.com/user-attachments/assets/3517c10c-d6d3-4e45-9617-fa3c9e14ff1d">
-
-   
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/3517c10c-d6d3-4e45-9617-fa3c9e14ff1d">  
 3. Add the Suricata repository:
 
    ```
