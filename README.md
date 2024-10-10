@@ -1,4 +1,4 @@
-# Suricata-Installation-Guide-for-Debian-12
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/f2c9a550-9b18-4ae6-9a69-75fc09ce1382"># Suricata-Installation-Guide-for-Debian-12
 A comprehensive guide for installing and configuring Suricata on Debian 12. Includes step-by-step instructions, troubleshooting tips, and best practices for setting up this powerful network security monitoring tool.
 
 # Suricata Installation Guide for Debian 12
@@ -23,8 +23,8 @@ This guide provides step-by-step instructions for installing Suricata on Debian 
 
    ```
   sudo apt install -y libpcre3 libpcre3-dbg libpcre3-dev build-essential autoconf automake libtool libpcap-dev libnet1-dev libyaml-0-2 libyaml-dev pkg-config zlib1g zlib1g- 
-  dev libcap-ng-dev libmagic-dev libjansson-dev libgeoip-dev python3-yaml rustc cargo
-   ```
+  dev libcap-ng-dev libmagic-dev libjansson-dev libgeoip-dev python3-yaml rustc cargo ```
+  
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/c7b43a90-ec83-49f5-8f9c-d6ba1da44132">
 
 3. Add the Suricata repository:
